@@ -3,12 +3,13 @@ public class ProcessadorTexto {
     String frase;
     char letra;
 
-
+// CONTA O NUMERO DE PALAVRAS
     public int contar(String frase) {
         int numerodepalavras = frase.split(" ").length;
         return numerodepalavras;
 
     }
+    // NUMERO DE LETRAS
     public int contar(char letra, String frase) {
 
         char letraAlvo = letra;
@@ -21,7 +22,7 @@ public class ProcessadorTexto {
         }
         return contador;
     }
-
+    // NUMERO DE PALAVRAS ESPECIFICA
     public int contar(String palavra, String frase) {
         String [] palavras = frase.split(" ");
         String palavraAlvo = palavra;
