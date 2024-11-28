@@ -1,18 +1,40 @@
 public class ProcessadorTexto {
-    String texto;
+    String palavra;
+    String frase;
+    char letra;
 
-    public ProcessadorTexto(String texto) {
-        this.texto = texto;
+// CONTA O NUMERO DE PALAVRAS
+    public int contar(String frase) {
+        int numerodepalavras = frase.split(" ").length;
+        return numerodepalavras;
+
     }
-    public int contador(){
-        return texto.split("\\s+").length;
-    }
-    public int contador(String texto, String letra){
-        cont = 0;
-        texto = texto.toLowerCase();
-        if(texto.split().equals(letra)) {
-            cont ++;
+    // NUMERO DE LETRAS
+    public int contar(char letra, String frase) {
+
+        char letraAlvo = letra;
+        int contador = 0;
+
+        for(int i = 0; i<frase.length(); i++) {
+            if(frase.charAt(i) == letraAlvo) {
+                contador++;
+            }
         }
-        return cont;
+        return contador;
     }
+    // NUMERO DE PALAVRAS ESPECIFICA
+    public int contar(String palavra, String frase) {
+        String [] palavras = frase.split(" ");
+        String palavraAlvo = palavra;
+        int contador = 0;
+
+
+        for(int i = 0; i<palavras.length; i++) {
+            if(palavras[i].equals(palavraAlvo)) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
 }
