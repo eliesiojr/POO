@@ -33,6 +33,6 @@ public class Main {
             resultman *= baseman;
         }
 
-        System.out.println("O resultado da potenciacao manual e" + resultman);
+        System.out.println("O resultado da potenciacao manual e " + resultman);
     }
 }
